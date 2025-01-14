@@ -30,10 +30,10 @@ module Cask
         vst3_plugindir:       "~/Library/Audio/Plug-Ins/VST3",
         screen_saverdir:      "~/Library/Screen Savers",
       }.freeze,
-      T::Hash[Symbol, T.nilable(String)],
+      T::Hash[Symbol, String],
     )
 
-    sig { returns(T::Hash[Symbol, T.untyped]) }
+    sig { returns(T::Hash[Symbol, String]) }
     def self.defaults
       {
         languages: LazyObject.new { ::OS::Mac.languages },
