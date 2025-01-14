@@ -12,6 +12,7 @@ module OS
             vst_plugindir:  "~/.vst",
             vst3_plugindir: "~/.vst3",
             fontdir:        "#{ENV.fetch("XDG_DATA_HOME", "~/.local/share")}/fonts",
+            appdir:         "~/.config/apps",
           }.freeze, T::Hash[Symbol, String])
 
           sig { returns(T::Hash[Symbol, String]) }
